@@ -10,19 +10,22 @@ Vue.config.productionTip = false;
 
 const host = window.location.host;
 const parts = host.split('.');
+const domainLength = 3; // route1.example.com => domain length = 3
 
-let router;
-
-if (parts.length === 2 || parts[0] === 'www') {
-  router = index;
-} else if (parts[0] === 'route1') {
-  router = route1;
-} else if (parts[0] === 'route2') {
-  router = route2;
-} else {
-  // If you want to do something else just comment the line below
-  router = index;
-}
+const router = () => {
+  let routes;
+  if (parts.length === (domainLength - 1) || parts[0] === 'www') {
+    routes = index;
+  } else if (parts[0] === 'route1') {
+    routes = route1;
+  } else if (parts[0] === 'route2') {
+    routes = route2;
+  } else {
+    // If you want to do something else just comment the line below
+    routes = index;
+  }
+  return routes;
+};
 
 /* eslint-disable no-new */
 new Vue({
