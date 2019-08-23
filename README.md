@@ -31,6 +31,6 @@ npm run build --report
 
 ## How to use
 * To use this from subdomains locally you need to configure your hosts.
-* For detailed explanation and code refer [this link](https://medium.com/@apalshah/vue-js-how-to-handle-multiple-subdomains-on-a-single-app-cba9b1f916c4)
+* For detailed explanation and code refer [this link](https://gosink.in/vue-js-how-to-handle-multiple-subdomains-on-a-single-app/)
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
